@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    height: 100px;
+    text-align: center;
+    margin-top: 30px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.box-title-text{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.container > div{
+    position: relative;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(139, 139, 139);
+    width: 100%;
+    height: 220px;
+    border: 1px solid black;
+}
+.box-title{
+    position: absolute;
+    right: 0%;
+    width: 40%;
+    height: 40px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.boxA-title{
+    background-color: rgb(255, 0, 183);
+}
+.boxB-title{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+.boxC-title{
+    background-color: rgb(127, 200, 39);
+}
+.dummy-text{
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*for laptops*/
+@media(min-width: 1175px){
+    .dummy-text{
+        font-size: 18px;
+        font-weight: bold;
+}
+}
+@media(min-width: 992px) and (max-width: 1174px){
+    .dummy-text{
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+/*for tablets*/
+@media(min-width: 768px) and (max-width: 991px){
+    .container{
+        display:block;
+    }
+    .container > div{
+        display: inline-block;
+        width: 44%;
+    }
+    .container .boxB{
+        position: absolute;
+        right: -4%;
+    }
+    .container .boxC{
+        width: 100%;
+    }
+    .dummy-text{
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+/*for mobile*/
+@media(min-width: 50px) and (max-width: 767px){
+    .container > div{
+        margin: 0;
+        margin-top: 10px;
+        width: 96%;
+        overflow:auto;
+    }
+    .container{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .dummy-text{
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
